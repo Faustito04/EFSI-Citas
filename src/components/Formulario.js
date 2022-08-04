@@ -1,9 +1,33 @@
-export default function Formulario() {
+import { useState } from "react"
+
+export default function Formulario({ setCitas }) {
+    const [mascota, setMascota] = useState("")
+    const [dueño, setDueño] = useState("")
+    const [fecha, setFecha] = useState("")
+    const [hora, setHora] = useState("")
+    const [sintomas, setSintomas] = useState("")
+    
+    const Submit = (a) => {
+        a.preventDefault();
+        setCitas(prev => [...prev, {
+            mascota,
+            dueño,
+            fecha,
+            hora,
+            sintomas
+        }])
+        setMascota("")
+        setDueño("")
+        setFecha("")
+        setHora("")
+        setSintomas("")
+    }
+
     return(
         <>
             <div class="one-half column">
                 <h2>Crear mi Cita</h2>
-                <form>
+                <form onSubmit={Submit}>
                     <label>Nombre Mascota</label>
                     <input type="text" name="mascota" class="u-full-width" placeholder="Nombre Mascota" value=""></input>
                     <label>Nombre Dueño</label>

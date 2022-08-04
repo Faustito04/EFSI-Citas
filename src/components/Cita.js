@@ -1,12 +1,12 @@
-export default function Cita(mascota, dueño, fecha, hora, sintomas) {
+export default function Cita(cita) {
     return(
         <>
             <div class="cita">
-                <p>Mascota: {mascota}</p>
-                <p>Dueño: {dueño}</p>
-                <p>Fecha: {fecha}</p>
-                <p>Hora: {hora}</p>
-                <p>Sintomas: {sintomas}</p>
+                <p>Mascota: {cita.mascota}</p>
+                <p>Dueño: {cita.dueño}</p>
+                <p>Fecha: {cita.fecha}</p>
+                <p>Hora: {cita.hora}</p>
+                <p>Sintomas: {cita.sintomas}</p>
                 <button class="button elimnar u-full-width">Eliminar ×</button>
             </div>
         </>
