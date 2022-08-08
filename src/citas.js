@@ -5,6 +5,14 @@ import ListadoCitas from './components/ListadoCitas';
 
 let listadoCitas = []
 
+const [citas, setCitas] = useState([{
+  mascota: "Nina",
+  owner: "Martin",
+  fecha: "2021-08-05",
+  hora: "08:20",
+  sintomas: "Le duele la pierna"
+}])
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -22,7 +30,3 @@ root.render(
     </div>
   </React.StrictMode>
 )
-
-const agregarCita = (mascota, dueño, fecha, hora, sintomas) => {
-  listadoCitas.push({mascota, dueño, fecha, hora, sintomas})
-}

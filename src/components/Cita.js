@@ -7,7 +7,7 @@ export default function Cita(cita) {
                 <p>Fecha: {cita.fecha}</p>
                 <p>Hora: {cita.hora}</p>
                 <p>Sintomas: {cita.sintomas}</p>
-                <button class="button elimnar u-full-width">Eliminar ×</button>
+                <button onClick={props.delete} class="button elimnar u-full-width">Eliminar ×</button>
             </div>
         </>
     )
