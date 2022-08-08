@@ -1,6 +1,6 @@
-import Cita from './components/Cita'
+import Cita from './Cita'
 
-export default function ListadoCitas(citas) {
+export default function ListadoCitas({citas, setCitas}) {
     return(
         citas.map((cita, i) => <Cita
             {...cita}
@@ -12,8 +12,4 @@ export default function ListadoCitas(citas) {
             }}
         />)
     )
-}
-
-const crearCita = () => {
-    
 }
